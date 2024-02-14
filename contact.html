@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
+
+</head>
+<body>
+
+    <h1>Contact Me</h1>
+    <div class="container">
+        <div class="outer-box">
+            <form onsubmit="sendEmail(); reset(); return false;" class="input">
+                <h2>Get in Touch</h2>
+                <input type="text" id="name" class="input-name" placeholder="Name" required>
+                <input type="text" id="email" class="input-email" placeholder="Email" required>
+                <textarea name="" id="message" rows="4" placeholder="What's your message?"></textarea>
+                <button class="message-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer-nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="projects.html">Projects</a></li>
+                <!--<li><a href="#" target="_blank">Contact</a></li>-->
+                <li><a href="aboutMe.html">About Me</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Port: "2525",
+                Username : "jufaust2@ursinus.edu",
+                Password : "571642979F45E5D1FB6D79841679FB1E2B4D",
+                To : 'jufaust2@ursinus.edu',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Equiry",
+                Body : "Name: " + document.getElementById("name").value
+                        + "<br> Email: " + document.getElementById("email").value
+                        + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Successfully")
+            );
+        }
+    </script>
+
+</body>
+</html>

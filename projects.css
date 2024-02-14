@@ -1,0 +1,126 @@
+body{
+    background: rgb(70, 70, 70);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+
+/* 
+    list of images and projects
+*/
+
+.blocks ul{
+    display: flex;
+    flex-direction: row; /* one thing next to another, 
+    or 3 images fitting in a row unless screen is pushed together*/
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.blocks ul li{
+    display: block;
+    flex-direction: row; /* one thing next to another, 
+    or 3 images fitting in a row unless screen is pushed together*/
+    flex-wrap: wrap;
+    
+}
+
+.blocks ul li a{ /* Caption decoration*/
+    text-decoration: none;
+    text-align: center;
+}
+
+.blocks ul li a :hover{ /* Caption decoration*/
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+}
+
+
+.blocks ul li a figure{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
+    color: rgb(226, 215, 215);
+}
+
+.blocks ul li a figure figcaption{
+    padding-top: 10px;
+}
+
+img{
+    height: 300px;
+}
+
+
+/* Videos */
+/*
+.video-container{
+    position: relative;
+}
+
+.video-container .hover-text{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(calc(140% -24px)); 
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 0.8px;
+    transition: all 400ms ease;
+}
+
+.video-container .hover-text.active {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translate(140%);
+}
+
+video {
+    width: 400px;
+    height: 300px;
+}
+*/
+
+
+/* 
+    footer
+*/
+
+footer nav ul { 
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+/* at 1321px wide, the margin for the 
+nav bar at the bottom will drop lower to give a cleaner look*/
+@media screen and (min-width: 1441px){
+    footer nav ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        margin-top: 250px;
+    }
+    
+}
+
+footer nav ul li{ 
+    margin-right: 20px;
+}
+
+footer nav ul li a{
+    color: white
+}
+
+footer nav ul li:hover{
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+}

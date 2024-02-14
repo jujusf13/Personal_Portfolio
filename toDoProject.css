@@ -1,0 +1,86 @@
+body{
+    /*background: rgb(173, 216, 230);*/
+    background: rgb(70, 70, 70);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+/*
+    meat
+*/
+
+.paragraph{
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px){
+    .paragraph{
+        margin-left: 150px;
+        margin-right: 150px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .paragraph{
+        margin-left: 70px;
+        margin-right: 70px;
+        text-align: center;
+    }
+}
+
+p {
+    border-radius: 5px;
+    color: rgb(226, 215, 215);
+    box-shadow: 0px 2px 10px 0px rgb(0, 0, 0);
+    color: rgb(226, 215, 215);
+}
+
+/* video*/
+
+.video-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    height: 300px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+
+
+/*
+    footer
+    - Lower the nav bar to the bottom?
+*/
+
+footer nav ul { 
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+footer nav ul li{ 
+    margin-right: 20px;
+    text-decoration: none;
+    margin-top: 100px; /*Change depending on screen size*/
+}
+
+footer nav ul li a{
+    color: white;
+}
+
+footer nav ul li:hover{
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+}
